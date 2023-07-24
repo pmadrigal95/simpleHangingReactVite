@@ -72,6 +72,7 @@ function App() {
 
   return (
     <div className="App">
+      <p>Hanging</p>
       
       {/* Imagenes */ }
       <HangImage imageNumber={attempts} />
@@ -81,19 +82,19 @@ function App() {
       <h3>{ hiddenWord }</h3>
 
       {/* Contador de intentos */ }
-      <h3>Intentos:  {attempts }</h3>
+      <h3>Attempts:  {attempts }</h3>
       
           {/* Mensaje si peridó */}
           {
             ( lose ) 
-              ? <h2>Perdió { word }!</h2>
+              ? <h2>Lose: { word }!</h2>
               : ''
           }
 
           {/* Mensaje si ganó */}
           {
             ( won ) 
-              ? <h2>Felicidades, usted ganó</h2>
+              ? <h2>Congratulations you won</h2>
               : ''
           }
 
@@ -110,7 +111,7 @@ function App() {
 
 
         <br /><br />
-        <button onClick={ newGame } >¿Nuevo juego?</button>
+        <button onClick={ newGame } >New word ?</button>
 
     </div>
   )
